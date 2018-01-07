@@ -48,10 +48,33 @@ def odds(list):
 			result += 1
 	return result
 
-print("The content of the list is %s" % list)
-print("The sum of the list is %d" % sum(list))
-print("The average of the list is %.1f." % average(list))
-print("The median of the list is %.1f" % median(list))
-print("The number of evens in the list is %d" % evens(list))
-print("The number of odds in the list is %d" % odds(list))
+def menu():
+	print()
+	print("Please choose an action:")
+	print()
+	print("(1) Print current values")
+	print("(2) Exit program")
+	print()
+	return eval(input("Your choice? "))
+
+def results():
+	print("The content of the list is %s" % list)
+	print("The sum of the list is %d" % sum(list))
+	print("The average of the list is %.1f." % average(list))
+	print("The median of the list is %.1f" % median(list))
+	print("The number of evens in the list is %d" % evens(list))
+	print("The number of odds in the list is %d" % odds(list))
+
+print()
+print("Welcome to list demonstration!")
+print("==============================")
+
+while (True):
+	num = menu()
+
+	if (num == 1):
+		results()
+	elif (num == 2):
+		exit()
+
 
