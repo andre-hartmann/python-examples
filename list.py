@@ -23,7 +23,7 @@ def average(list):
 
 def median(list):
 	copy = sorted(list)
-	size = len(list)
+	size = len(copy)
 	if (size == 0):
 		return 0
 
