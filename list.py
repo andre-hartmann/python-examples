@@ -22,6 +22,7 @@ def average(list):
 	return result
 
 def median(list):
+	copy = sorted(list)
 	size = len(list)
 	if (size == 0):
 		return 0
@@ -29,9 +30,9 @@ def median(list):
 	middle = int((size - 1) / 2)
 
 	if ((size % 2) == 0):
-		return (list[middle] + list[middle + 1]) / 2.0
+		return (copy[middle] + copy[middle + 1]) / 2.0
 	else:
-		return float(list[middle])
+		return float(copy[middle])
 
 def evens(list):
 	result = 0
