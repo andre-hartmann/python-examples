@@ -54,6 +54,7 @@ def menu():
 	print()
 	print("(1) Print current values")
 	print("(2) Insert value to list")
+	print("(3) Remove value from list")
 	print("(9) Exit program")
 	print()
 	return eval(input("Your choice? "))
@@ -72,6 +73,11 @@ def insert():
 
 	list.insert(position, value)
 
+def delete():
+	position = eval(input("Delete value at position? "))
+	
+	del list[position]
+
 print()
 print("Welcome to list demonstration!")
 print("==============================")
@@ -83,6 +89,8 @@ while (True):
 		results()
 	elif (num == 2):
 		insert()
+	elif (num == 3):
+		delete()
 	elif (num == 9):
 		exit()
 
