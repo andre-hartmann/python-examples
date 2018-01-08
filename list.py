@@ -53,7 +53,8 @@ def menu():
 	print("Please choose an action:")
 	print()
 	print("(1) Print current values")
-	print("(2) Exit program")
+	print("(2) Insert value to list")
+	print("(9) Exit program")
 	print()
 	return eval(input("Your choice? "))
 
@@ -65,6 +66,12 @@ def results():
 	print("The number of evens in the list is %d" % evens(list))
 	print("The number of odds in the list is %d" % odds(list))
 
+def insert():
+	position = eval(input("Insert at position? "))
+	value = eval(input("Insert which value? "))
+
+	list.insert(position, value)
+
 print()
 print("Welcome to list demonstration!")
 print("==============================")
@@ -75,6 +82,7 @@ while (True):
 	if (num == 1):
 		results()
 	elif (num == 2):
+		insert()
+	elif (num == 9):
 		exit()
-
 
